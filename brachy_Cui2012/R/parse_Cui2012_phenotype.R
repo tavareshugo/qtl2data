@@ -21,8 +21,7 @@ pheno_text <- readtext(file_temp)$text %>%
 
 # Keep only lines with actual data
 # excluding lines segregating for resistance
-pheno_text <- pheno_text[5:87]
-
+pheno_text <- pheno_text[c(5:48, 50:87)]
 
 #### Parse data ####
 
