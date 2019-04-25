@@ -32,7 +32,7 @@ library(qtl2)
 
 #### Prepare genotypes
 
-Download the genotype data formated for `R/qtl2` as a zip file from [here](https://github.com/tavareshugo/qtl2data/raw/master/brachy_Cui2012/Cui2012_genotypes.rds).
+Download the genotype data formated for `R/qtl2` as a zip file from [here](https://github.com/tavareshugo/qtl2data/raw/master/brachy_Cui2012/Cui2012_qtl2cross.zip).
 
 ``` r
 # Read cross object
