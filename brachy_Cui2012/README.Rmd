@@ -37,7 +37,7 @@ These issues are detailed in a section below.
 
 ## Quick start 
 
-Here, we show how to do a quick scan using the data provided:
+Here, we show how to do a quick scan using the data provided. 
 
 ```{r}
 # load library
@@ -46,6 +46,9 @@ library(qtl2)
 
 #### Prepare genotypes
 
+Download the genotype data formated for `R/qtl2` as a zip file from
+[here](https://github.com/tavareshugo/qtl2data/raw/master/brachy_Cui2012/Cui2012_genotypes.rds).
+
 ```{r}
 # Read cross object
 ril_cross <- read_cross2("Cui2012_qtl2cross.zip")
@@ -53,7 +56,6 @@ ril_cross <- read_cross2("Cui2012_qtl2cross.zip")
 # inspect its contents
 ril_cross
 ```
-
 
 First we impute genotypes and calculate genotype probabilities
 
@@ -65,7 +67,10 @@ map <- insert_pseudomarkers(ril_cross$gmap, step = 0.5)
 prob <- calc_genoprob(ril_cross, map, error_prob = 0.01, cores = 3)
 ```
 
+
 #### Prepare phenotype
+
+Download the example phenotype data from [here](https://github.com/tavareshugo/qtl2data/raw/master/brachy_Cui2012/Cui2012_phenotype.rds)
 
 ```{r}
 # Read example phenotype from Cui 2012
@@ -140,13 +145,11 @@ library(ggplot2)
 theme_set(theme_bw())
 ```
 
+Download the genotype data as a `data.frame` from [here](https://github.com/tavareshugo/qtl2data/raw/master/brachy_Cui2012/Cui2012_genotypes.rds).
 
 ```{r}
 # Read SNP table
 ril_snps <- readRDS("Cui2012_genotypes.rds")
-
-# Read cross object
-ril_cross <- read_cross2("Cui2012_qtl2cross.zip")
 ```
 
 #### RIL001 missing genotypes
